@@ -1,0 +1,39 @@
+
+新しい Visual Studio への対応
+
+コンパイラのバージョン（プラットフォームツールセット）が新しくなったときは
+次の手順でライブラリを作成し直す
+
+(1) 必要なパラメータの確認
+    ./show_msc_version/show_msc_version.sln を新しい Visual Studio で起動し、
+    コンパイラを upgrade してからビルド＆実行する
+
+(2) ソースファイルの修正
+    "../../../boost/config/auto_link.hpp" の 150 行目付近
+    BOOST_MSVC による分岐に適切な行をを追加する
+    BOOST_MSVC/BOOST_LIB_MSVC の値は (1) に従う
+
+(3) バッチファイルの修正
+    "./make.bat" の 73行目（call :one_of %TOOL%）の引数に 新しいツールセットに
+    対応した VC の値を追加する
+    VC の値は (1) に従う
+
+    "./make.bat" の 94行目以降にある「パラメータの設定」で 変数 VCVARS と VS に
+    新しいツールセットに対応した値を設定する
+    VCVARS の値はウェブで調べる. 例えば
+        https://msdn.microsoft.com/ja-jp/library/f2ccy3wt.aspx
+	cf. http://msdn.microsoft.com/ja-jp/library/x4d2c09s%28v=vs.120%29.aspx
+    VS の値は (1) に従う
+
+(4) ライブラリの作成
+    ./make.bat [-m {x86|x64}] [-t toolset] {x86|x64} build を実行する
+
+(5) ライブラリのインストール
+    ./make.bat [-t toolset] {x86|x64} install を実行する
+
+========================================================
+make.bat のパラメータの調べ方
+    ./make -h を実行する
+
+以上
+

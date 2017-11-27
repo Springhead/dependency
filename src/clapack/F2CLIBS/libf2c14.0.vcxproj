@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Trace|Win32">
+      <Configuration>Trace</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Trace|x64">
+      <Configuration>Trace</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D4D739B-129F-4C15-B5E2-886E154DBE54}</ProjectGuid>
+    <RootNamespace>libf2c140</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>libf2c</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Trace|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Trace|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Trace|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Trace|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\core\src\SpringheadMacros.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Trace|Win32'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfTrace)$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfDebug)$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfRelease)$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Trace|x64'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfTrace)$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfDebug)$(Platform)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)LIB\$(Platform)\</OutDir>
+    <IntDir>$(VisualStudioVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)$(VisualStudioVersion)$(LibConfRelease)$(Platform)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>"libf2c\comptry.bat" cl   -DUSE_CLOCK -DMSDOS -DNO_ONEXIT -Ot1 -DNO_FPINIT "libf2c\arithchk.c"
+arithchk &gt;"libf2c\arith.h"
+del arithchk.exe
+del arithchk.obj</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Trace|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>"libf2c\comptry.bat" cl   -DUSE_CLOCK -DMSDOS -DNO_ONEXIT -Ot1 -DNO_FPINIT "libf2c\arithchk.c"
+arithchk &gt;"libf2c\arith.h"
+del arithchk.exe
+del arithchk.obj</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>"libf2c\comptry.bat" cl   -DUSE_CLOCK -DMSDOS -DNO_ONEXIT -Ot1 -DNO_FPINIT "libf2c\arithchk.c"
+arithchk &gt;"libf2c\arith.h"
+del arithchk.exe
+del arithchk.obj</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Trace|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>MSDOS;USE_CLOCK;NO_ONEXIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>"libf2c\comptry.bat" cl   -DUSE_CLOCK -DMSDOS -DNO_ONEXIT -Ot1 -DNO_FPINIT "libf2c\arithchk.c"
+arithchk &gt;"libf2c\arith.h"
+del arithchk.exe
+del arithchk.obj</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="libf2c\f2c.h" />
+    <ClInclude Include="libf2c\fio.h" />
+    <ClInclude Include="libf2c\fmt.h" />
+    <ClInclude Include="libf2c\fp.h" />
+    <ClInclude Include="libf2c\lio.h" />
+    <ClInclude Include="libf2c\math.h" />
+    <ClInclude Include="libf2c\rawio.h" />
+    <ClInclude Include="libf2c\signal1.h" />
+    <ClInclude Include="libf2c\sysdep1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libf2c\abort_.c" />
+    <ClCompile Include="libf2c\backspac.c" />
+    <ClCompile Include="libf2c\cabs.c" />
+    <ClCompile Include="libf2c\close.c" />
+    <ClCompile Include="libf2c\c_abs.c" />
+    <ClCompile Include="libf2c\c_cos.c" />
+    <ClCompile Include="libf2c\c_div.c" />
+    <ClCompile Include="libf2c\c_exp.c" />
+    <ClCompile Include="libf2c\c_log.c" />
+    <ClCompile Include="libf2c\c_sin.c" />
+    <ClCompile Include="libf2c\c_sqrt.c" />
+    <ClCompile Include="libf2c\derfc_.c" />
+    <ClCompile Include="libf2c\derf_.c" />
+    <ClCompile Include="libf2c\dfe.c" />
+    <ClCompile Include="libf2c\dolio.c" />
+    <ClCompile Include="libf2c\dtime_.c" />
+    <ClCompile Include="libf2c\due.c" />
+    <ClCompile Include="libf2c\d_abs.c" />
+    <ClCompile Include="libf2c\d_acos.c" />
+    <ClCompile Include="libf2c\d_asin.c" />
+    <ClCompile Include="libf2c\d_atan.c" />
+    <ClCompile Include="libf2c\d_atn2.c" />
+    <ClCompile Include="libf2c\d_cnjg.c" />
+    <ClCompile Include="libf2c\d_cos.c" />
+    <ClCompile Include="libf2c\d_cosh.c" />
+    <ClCompile Include="libf2c\d_dim.c" />
+    <ClCompile Include="libf2c\d_exp.c" />
+    <ClCompile Include="libf2c\d_imag.c" />
+    <ClCompile Include="libf2c\d_int.c" />
+    <ClCompile Include="libf2c\d_lg10.c" />
+    <ClCompile Include="libf2c\d_log.c" />
+    <ClCompile Include="libf2c\d_mod.c" />
+    <ClCompile Include="libf2c\d_nint.c" />
+    <ClCompile Include="libf2c\d_prod.c" />
+    <ClCompile Include="libf2c\d_sign.c" />
+    <ClCompile Include="libf2c\d_sin.c" />
+    <ClCompile Include="libf2c\d_sinh.c" />
+    <ClCompile Include="libf2c\d_sqrt.c" />
+    <ClCompile Include="libf2c\d_tan.c" />
+    <ClCompile Include="libf2c\d_tanh.c" />
+    <ClCompile Include="libf2c\ef1asc_.c" />
+    <ClCompile Include="libf2c\ef1cmc_.c" />
+    <ClCompile Include="libf2c\endfile.c" />
+    <ClCompile Include="libf2c\erf.c" />
+    <ClCompile Include="libf2c\erfc_.c" />
+    <ClCompile Include="libf2c\erf_.c" />
+    <ClCompile Include="libf2c\err.c" />
+    <ClCompile Include="libf2c\etime_.c" />
+    <ClCompile Include="libf2c\exit_.c" />
+    <ClCompile Include="libf2c\f77vers.c" />
+    <ClCompile Include="libf2c\f77_aloc.c" />
+    <ClCompile Include="libf2c\fmt.c" />
+    <ClCompile Include="libf2c\fmtlib.c" />
+    <ClCompile Include="libf2c\ftell_.c" />
+    <ClCompile Include="libf2c\getenv_.c" />
+    <ClCompile Include="libf2c\hl_ge.c" />
+    <ClCompile Include="libf2c\hl_gt.c" />
+    <ClCompile Include="libf2c\hl_le.c" />
+    <ClCompile Include="libf2c\hl_lt.c" />
+    <ClCompile Include="libf2c\h_abs.c" />
+    <ClCompile Include="libf2c\h_dim.c" />
+    <ClCompile Include="libf2c\h_dnnt.c" />
+    <ClCompile Include="libf2c\h_indx.c" />
+    <ClCompile Include="libf2c\h_len.c" />
+    <ClCompile Include="libf2c\h_mod.c" />
+    <ClCompile Include="libf2c\h_nint.c" />
+    <ClCompile Include="libf2c\h_sign.c" />
+    <ClCompile Include="libf2c\i77vers.c" />
+    <ClCompile Include="libf2c\iio.c" />
+    <ClCompile Include="libf2c\ilnw.c" />
+    <ClCompile Include="libf2c\inquire.c" />
+    <ClCompile Include="libf2c\i_abs.c" />
+    <ClCompile Include="libf2c\i_dim.c" />
+    <ClCompile Include="libf2c\i_dnnt.c" />
+    <ClCompile Include="libf2c\i_indx.c" />
+    <ClCompile Include="libf2c\i_len.c" />
+    <ClCompile Include="libf2c\i_mod.c" />
+    <ClCompile Include="libf2c\i_nint.c" />
+    <ClCompile Include="libf2c\i_sign.c" />
+    <ClCompile Include="libf2c\lbitbits.c" />
+    <ClCompile Include="libf2c\lbitshft.c" />
+    <ClCompile Include="libf2c\lread.c" />
+    <ClCompile Include="libf2c\lwrite.c" />
+    <ClCompile Include="libf2c\l_ge.c" />
+    <ClCompile Include="libf2c\l_gt.c" />
+    <ClCompile Include="libf2c\l_le.c" />
+    <ClCompile Include="libf2c\l_lt.c" />
+    <ClCompile Include="libf2c\open.c" />
+    <ClCompile Include="libf2c\pow_ci.c" />
+    <ClCompile Include="libf2c\pow_dd.c" />
+    <ClCompile Include="libf2c\pow_di.c" />
+    <ClCompile Include="libf2c\pow_hh.c" />
+    <ClCompile Include="libf2c\pow_ii.c" />
+    <ClCompile Include="libf2c\pow_ri.c" />
+    <ClCompile Include="libf2c\pow_zi.c" />
+    <ClCompile Include="libf2c\pow_zz.c" />
+    <ClCompile Include="libf2c\rdfmt.c" />
+    <ClCompile Include="libf2c\rewind.c" />
+    <ClCompile Include="libf2c\rsfe.c" />
+    <ClCompile Include="libf2c\rsli.c" />
+    <ClCompile Include="libf2c\rsne.c" />
+    <ClCompile Include="libf2c\r_abs.c" />
+    <ClCompile Include="libf2c\r_acos.c" />
+    <ClCompile Include="libf2c\r_asin.c" />
+    <ClCompile Include="libf2c\r_atan.c" />
+    <ClCompile Include="libf2c\r_atn2.c" />
+    <ClCompile Include="libf2c\r_cnjg.c" />
+    <ClCompile Include="libf2c\r_cos.c" />
+    <ClCompile Include="libf2c\r_cosh.c" />
+    <ClCompile Include="libf2c\r_dim.c" />
+    <ClCompile Include="libf2c\r_exp.c" />
+    <ClCompile Include="libf2c\r_imag.c" />
+    <ClCompile Include="libf2c\r_int.c" />
+    <ClCompile Include="libf2c\r_lg10.c" />
+    <ClCompile Include="libf2c\r_log.c" />
+    <ClCompile Include="libf2c\r_mod.c" />
+    <ClCompile Include="libf2c\r_nint.c" />
+    <ClCompile Include="libf2c\r_sign.c" />
+    <ClCompile Include="libf2c\r_sin.c" />
+    <ClCompile Include="libf2c\r_sinh.c" />
+    <ClCompile Include="libf2c\r_sqrt.c" />
+    <ClCompile Include="libf2c\r_tan.c" />
+    <ClCompile Include="libf2c\r_tanh.c" />
+    <ClCompile Include="libf2c\sfe.c" />
+    <ClCompile Include="libf2c\signal_.c" />
+    <ClCompile Include="libf2c\signbit.c" />
+    <ClCompile Include="libf2c\sig_die.c" />
+    <ClCompile Include="libf2c\sue.c" />
+    <ClCompile Include="libf2c\system_.c" />
+    <ClCompile Include="libf2c\s_cat.c" />
+    <ClCompile Include="libf2c\s_cmp.c" />
+    <ClCompile Include="libf2c\s_copy.c" />
+    <ClCompile Include="libf2c\s_paus.c" />
+    <ClCompile Include="libf2c\s_rnge.c" />
+    <ClCompile Include="libf2c\s_stop.c" />
+    <ClCompile Include="libf2c\typesize.c" />
+    <ClCompile Include="libf2c\uio.c" />
+    <ClCompile Include="libf2c\uninit.c" />
+    <ClCompile Include="libf2c\util.c" />
+    <ClCompile Include="libf2c\wref.c" />
+    <ClCompile Include="libf2c\wrtfmt.c" />
+    <ClCompile Include="libf2c\wsfe.c" />
+    <ClCompile Include="libf2c\wsle.c" />
+    <ClCompile Include="libf2c\wsne.c" />
+    <ClCompile Include="libf2c\xwsne.c" />
+    <ClCompile Include="libf2c\z_abs.c" />
+    <ClCompile Include="libf2c\z_cos.c" />
+    <ClCompile Include="libf2c\z_div.c" />
+    <ClCompile Include="libf2c\z_exp.c" />
+    <ClCompile Include="libf2c\z_log.c" />
+    <ClCompile Include="libf2c\z_sin.c" />
+    <ClCompile Include="libf2c\z_sqrt.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libjpeg", "win\libjpeg\libjpeg9.vcproj", "{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "win\libpng\libpng9.vcproj", "{565C13F7-2A06-4135-8F49-02D1A9589145}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtiff", "win\libtiff\libtiff9.vcproj", "{CCE99B0B-E57B-481A-A5A4-6ADE16913D10}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libungif", "win\libungif\libungif9.vcproj", "{D429D599-004E-4CD2-9BC9-9BA6E08A21C2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loadBmp", "win\loadBmp\loadBmp9.vcproj", "{80DDDBCF-117A-46AF-991C-B4DD8D772F62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{565C13F7-2A06-4135-8F49-02D1A9589145} = {565C13F7-2A06-4135-8F49-02D1A9589145}
+		{D429D599-004E-4CD2-9BC9-9BA6E08A21C2} = {D429D599-004E-4CD2-9BC9-9BA6E08A21C2}
+		{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D} = {89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}
+		{BB992CF3-42B5-4108-A774-B96705C8BCC5} = {BB992CF3-42B5-4108-A774-B96705C8BCC5}
+		{CCE99B0B-E57B-481A-A5A4-6ADE16913D10} = {CCE99B0B-E57B-481A-A5A4-6ADE16913D10}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paintlib", "win\paintlib\paintlib9.vcproj", "{BB992CF3-42B5-4108-A774-B96705C8BCC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}.Debug|Default.ActiveCfg = Debug|Win32
+		{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}.Debug|Default.Build.0 = Debug|Win32
+		{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}.Release|Default.ActiveCfg = Release|Win32
+		{89C6E83C-39A7-4D56-A5EE-61A0FAF3E18D}.Release|Default.Build.0 = Release|Win32
+		{565C13F7-2A06-4135-8F49-02D1A9589145}.Debug|Default.ActiveCfg = Debug|Win32
+		{565C13F7-2A06-4135-8F49-02D1A9589145}.Debug|Default.Build.0 = Debug|Win32
+		{565C13F7-2A06-4135-8F49-02D1A9589145}.Release|Default.ActiveCfg = Release|Win32
+		{565C13F7-2A06-4135-8F49-02D1A9589145}.Release|Default.Build.0 = Release|Win32
+		{CCE99B0B-E57B-481A-A5A4-6ADE16913D10}.Debug|Default.ActiveCfg = Debug|Win32
+		{CCE99B0B-E57B-481A-A5A4-6ADE16913D10}.Debug|Default.Build.0 = Debug|Win32
+		{CCE99B0B-E57B-481A-A5A4-6ADE16913D10}.Release|Default.ActiveCfg = Release|Win32
+		{CCE99B0B-E57B-481A-A5A4-6ADE16913D10}.Release|Default.Build.0 = Release|Win32
+		{D429D599-004E-4CD2-9BC9-9BA6E08A21C2}.Debug|Default.ActiveCfg = Debug|Win32
+		{D429D599-004E-4CD2-9BC9-9BA6E08A21C2}.Debug|Default.Build.0 = Debug|Win32
+		{D429D599-004E-4CD2-9BC9-9BA6E08A21C2}.Release|Default.ActiveCfg = Release|Win32
+		{D429D599-004E-4CD2-9BC9-9BA6E08A21C2}.Release|Default.Build.0 = Release|Win32
+		{80DDDBCF-117A-46AF-991C-B4DD8D772F62}.Debug|Default.ActiveCfg = Debug|Win32
+		{80DDDBCF-117A-46AF-991C-B4DD8D772F62}.Debug|Default.Build.0 = Debug|Win32
+		{80DDDBCF-117A-46AF-991C-B4DD8D772F62}.Release|Default.ActiveCfg = Release|Win32
+		{80DDDBCF-117A-46AF-991C-B4DD8D772F62}.Release|Default.Build.0 = Release|Win32
+		{BB992CF3-42B5-4108-A774-B96705C8BCC5}.Debug|Default.ActiveCfg = Debug|Win32
+		{BB992CF3-42B5-4108-A774-B96705C8BCC5}.Debug|Default.Build.0 = Debug|Win32
+		{BB992CF3-42B5-4108-A774-B96705C8BCC5}.Release|Default.ActiveCfg = Release|Win32
+		{BB992CF3-42B5-4108-A774-B96705C8BCC5}.Release|Default.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

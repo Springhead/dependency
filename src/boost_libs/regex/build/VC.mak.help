@@ -1,0 +1,17 @@
+
+使用方法の説明
+
+(1) ビルド
+    nmake VC=$vc VS=$vs TARGET=$target -f vc.mak
+
+(2) インストール
+    nmake VC=$vc TARGET=$target [LIBDIR=$libdir] [BINDIR=$bindir] install -f vc.mak
+
+パラメータの説明
+    $vc	      プラットフォームツールセットバージョン（vc90, vc100, vc110, vc120, ..）
+    $vs	      Visual Studio バージョン（9.0, 10.0, 11.0, 12.0, ..）
+    $target   対象コンピュータのアーキテクチャ（x86, x64）
+    $libdir   .lib ファイルのインストールディレクトリ（デフォルトは ..\..\..\..\lib）
+    $bindir   .dll ファイルのインストールディレクトリ（デフォルトは ..\..\..\..\bin）
+
+※ ./make.bat x86 intro も参照のこと
