@@ -21,7 +21,8 @@ if "%1" neq "" (
 set FILES=blas libf2c clapack
 set CONFIG=D b T
 set PLATFORM=Win32 x64
-set SUFFIX=lib pdb
+rem set SUFFIX=lib pdb
+set SUFFIX=lib
 
 for %%p in (%PLATFORM%) do (
     set T=%%p
