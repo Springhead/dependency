@@ -14,8 +14,11 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include "freeglut.h"
-#define GLUTCALLBACK
+#define USE_FREEGLUT
+#define NDEBUG
+#  include <GL/freeglut.h>
+#  define GLUTCALLBACK
+#undef NDEBUG
 
 /*** END OF FILE ***/
 
