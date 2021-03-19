@@ -17,7 +17,6 @@
 #define USE_FREEGLUT
 #define NDEBUG
 #  include <GL/freeglut.h>
-#  define GLUTCALLBACK
 #undef NDEBUG
 
 /*** END OF FILE ***/

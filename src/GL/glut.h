@@ -9,13 +9,13 @@
 #ifdef USE_FREEGLUT
 #define NDEBUG
 #  include <GL/freeglut.h>
-#  define GLUTCALLBACK
 #undef NDEBUG
 #else
 # ifdef _MSC_VER
 #  define NDEBUG
-#  include "win32/glut.h"
-#undef NDEBUG
+#    include "win32/glut.h"
+#    define GLUTCALLBACK
+#  undef NDEBUG
 # endif
 # ifdef __CYGWIN__
 #  include "cygwin/glut.h" 

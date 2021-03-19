@@ -65,6 +65,13 @@
 #include <string>
 #include <vector>
 
+#ifdef _WIN32
+#pragma warning(disable : 26495)
+#define GLUICALLBACK __cdecl
+#else
+#define GLUICALLBACK
+#endif
+
 #define GLUI_VERSION 2.3f    /********** Current version **********/
 
 #if defined(_WIN32)
@@ -288,8 +295,8 @@ class Arcball;
 #define GLUI_EDITTEXT_STRING           4
 
 /*** Definition of callbacks ***/
-typedef void (GLUTCALLBACK *GLUI_Update_CB) (int id);
-typedef void (GLUTCALLBACK *GLUI_Control_CB)(GLUI_Control *);
+typedef void (GLUICALLBACK *GLUI_Update_CB) (int id);
+typedef void (GLUICALLBACK *GLUI_Control_CB)(GLUI_Control *);
 typedef void (GLUTCALLBACK *Int1_CB)        (int);
 typedef void (GLUTCALLBACK *Int2_CB)        (int, int);
 typedef void (GLUTCALLBACK *Int3_CB)        (int, int, int);
@@ -496,7 +503,7 @@ public:
 
     GLUI_Glut_Window   *find_glut_window( int window_id );
 
-    void           set_glutIdleFunc(void (GLUTCALLBACK *f)(void));
+    void           set_glutIdleFunc(void (GLUICALLBACK *f)(void));
 
     /**************
     void (*glut_keyboard_CB)(unsigned char, int, int);
@@ -515,11 +522,10 @@ public:
 
     /********** GLUT callthroughs **********/
     /* These are the glut callbacks that we do not handle */
-
-    void set_glutReshapeFunc (void (GLUTCALLBACK *f)(int width, int height));
-    void set_glutKeyboardFunc(void (GLUTCALLBACK *f)(unsigned char key, int x, int y));
-    void set_glutSpecialFunc (void (GLUTCALLBACK *f)(int key, int x, int y));
-    void set_glutMouseFunc   (void (GLUTCALLBACK *f)(int, int, int, int ));
+    void set_glutReshapeFunc (void (GLUICALLBACK*f)(int width, int height));
+    void set_glutKeyboardFunc(void (GLUICALLBACK*f)(unsigned char key, int x, int y));
+    void set_glutSpecialFunc (void (GLUICALLBACK*f)(int key, int x, int y));
+    void set_glutMouseFunc   (void (GLUICALLBACK*f)(int, int, int, int ));
 
     void set_glutDisplayFunc(void (GLUTCALLBACK *f)(void)) {glutDisplayFunc(f);}
     void set_glutTimerFunc(unsigned int millis, void (GLUTCALLBACK *f)(int value), int value)
@@ -948,7 +954,7 @@ public:
         spacebar_mouse_click = true;    /* Does spacebar simulate a mouse click? */
         live_type      = GLUI_LIVE_NONE;
         text = "";
-        last_live_text == "";
+        last_live_text = "";
         live_inited    = false;
         collapsible    = false;
         is_open        = true;
@@ -1564,15 +1570,15 @@ public:
 
     /***** GLUT callback setup functions *****/
     /*
-      void set_glutDisplayFunc(void (GLUTCALLBACK *f)(void));
-      void set_glutReshapeFunc(void (GLUTCALLBACK *f)(int width, int height));
-      void set_glutKeyboardFunc(void (GLUTCALLBACK *f)(unsigned char key, int x, int y));
-      void set_glutSpecialFunc(void (GLUTCALLBACK *f)(int key, int x, int y));
-      void set_glutMouseFunc(void (GLUTCALLBACK *f)(int button, int state, int x, int y));
-      void set_glutMotionFunc(void (GLUTCALLBACK *f)(int x, int y));
-      void set_glutPassiveMotionFunc(void (GLUTCALLBACK *f)(int x, int y));
-      void set_glutEntryFunc(void (GLUTCALLBACK *f)(int state));
-      void set_glutVisibilityFunc(void (GLUTCALLBACK *f)(int state));
+      void set_glutDisplayFunc(void (GLUICALLBACK *f)(void));
+      void set_glutReshapeFunc(void (GLUICALLBACK *f)(int width, int height));
+      void set_glutKeyboardFunc(void (GLUICALLBACK *f)(unsigned char key, int x, int y));
+      void set_glutSpecialFunc(void (GLUICALLBACK *f)(int key, int x, int y));
+      void set_glutMouseFunc(void (GLUICALLBACK *f)(int button, int state, int x, int y));
+      void set_glutMotionFunc(void (GLUICALLBACK *f)(int x, int y));
+      void set_glutPassiveMotionFunc(void (GLUICALLBACK *f)(int x, int y));
+      void set_glutEntryFunc(void (GLUICALLBACK *f)(int state));
+      void set_glutVisibilityFunc(void (GLUICALLBACK *f)(int state));
       void set_glutInit( int *argcp, const char **argv );
       void set_glutInitWindowSize(int width, int height);
       void set_glutInitWindowPosition(int x, int y);

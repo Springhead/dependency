@@ -14,6 +14,13 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#ifdef _WIN32
+# define GLUTCALLBACK __cdecl
+#else
+# define GLUTCALLBACK
+#endif
+
+
 #include "freeglut_std.h"
 #include "freeglut_ext.h"
 
